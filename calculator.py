@@ -13,40 +13,43 @@ while True:
     input = raw_input(">")
     tokens = input.split(" ")
 
+    tokens[1] = float(tokens[1])
+    tokens[2] = float(tokens[2])
+
     if tokens[0] == "q": 
         quit()
 
     else:
         if tokens[0] == "+": 
-            output = add(int(tokens[1]), int(tokens[2]))
+            output = add(tokens[1], tokens[2])
             print output
     
         elif tokens[0] == "-": 
-            output = subtract(int(tokens[1]), int(tokens[2]))
+            output = subtract(tokens[1], tokens[2])
             print output
     
         elif tokens[0] == "*": 
-            output = multiply(int(tokens[1]), int(tokens[2]))
+            output = multiply(tokens[1], tokens[2])
             print output
     
         elif tokens[0] == "/": 
-            output = divide(int(tokens[1]), int(tokens[2]))
+            output = divide(tokens[1], tokens[2])
             print output
     
         elif tokens[0] == "square": 
-            output = square(int(tokens[1]))
+            output = square(tokens[1])
             print output
     
         elif tokens[0] == "cube": 
-            output = cube(int(tokens[1]))
+            output = cube(tokens[1])
             print output    
     
         elif tokens[0] == "pow": 
-            output = pow(int(tokens[1]), int(tokens[2]))
+            output = pow(tokens[1], tokens[2])
             print output
     
         elif tokens[0] == "mod": 
-            output = mod(int(tokens[1]), int(tokens[2]))
+            output = mod(tokens[1], tokens[2])
             print output    
     
         else:
