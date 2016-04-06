@@ -14,7 +14,11 @@ while True:
     tokens = input.split(" ")
 
     tokens[1] = float(tokens[1])
-    tokens[2] = float(tokens[2])
+
+    try:
+        tokens[2] = float(tokens[2])
+    except IndexError:
+        pass
 
     if tokens[0] == "q": 
         quit()
@@ -52,5 +56,5 @@ while True:
             output = mod(tokens[1], tokens[2])
             print output    
     
-        else:
-            print "That is not a valid input, try again."
+        # else:
+        #     print "That is not a valid input, try again."
