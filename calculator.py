@@ -13,47 +13,48 @@ while True:
     input = raw_input(">")
     tokens = input.split(" ")
 
-    tokens[1] = float(tokens[1])
+    operation = tokens[0]
+    num1 = float(tokens[1])
 
     try:
-        tokens[2] = float(tokens[2])
+        num2 = float(tokens[2])
     except IndexError:
         pass
-
-    if tokens[0] == "q": 
+        
+    if operation == "q": 
         quit()
 
     else:
-        if tokens[0] == "+": 
-            output = add(tokens[1], tokens[2])
+        if operation == "+": 
+            output = add(num1, num2)
             print output
     
-        elif tokens[0] == "-": 
-            output = subtract(tokens[1], tokens[2])
+        elif operation == "-": 
+            output = subtract(num1, num2)
             print output
     
-        elif tokens[0] == "*": 
-            output = multiply(tokens[1], tokens[2])
+        elif operation == "*": 
+            output = multiply(num1, num2)
             print output
     
-        elif tokens[0] == "/": 
-            output = divide(tokens[1], tokens[2])
+        elif operation == "/": 
+            output = divide(num1, num2)
             print output
     
-        elif tokens[0] == "square": 
-            output = square(tokens[1])
+        elif operation == "square": 
+            output = square(num1)
             print output
     
-        elif tokens[0] == "cube": 
-            output = cube(tokens[1])
+        elif operation == "cube": 
+            output = cube(num1)
             print output    
     
-        elif tokens[0] == "pow": 
-            output = pow(tokens[1], tokens[2])
+        elif operation == "pow": 
+            output = pow(num1, num2)
             print output
     
-        elif tokens[0] == "mod": 
-            output = mod(tokens[1], tokens[2])
+        elif operation == "mod": 
+            output = mod(num1, num2)
             print output    
     
         # else:
