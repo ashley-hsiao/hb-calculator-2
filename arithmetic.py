@@ -1,7 +1,14 @@
-def add(num1, num2):
-    """Returns the sum of the two inputs"""
-
-    return num1 + num2
+# def add(num1, num2):
+#     """Returns the sum of the two inputs"""
+    
+#     return num1 + num2
+    
+# This sums up infinite number of arguments
+def add(nums):
+    total = 0
+    for num in nums:
+        total += num
+    return total
 
 
 def subtract(num1, num2):

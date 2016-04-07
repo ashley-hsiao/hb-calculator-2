@@ -6,73 +6,71 @@ calculator program yourself in this file.
 """
 
 from arithmetic import *
-
-def check_input(tokens):
-    if len(tokens) == 3:
-        calculate_number()
-    else:
-        print "That is not a valid input, please try again."
-
-
 # Your code goes here
 
-def calculate_number():
-    while True:
-        input = raw_input(">")
-        tokens = input.split(" ")
-        # print len(tokens)
 
-        operation = tokens[0]
+while True:
+    input = raw_input(">")
+    list_of_inputs = input.split(" ")
 
-        try:
-            num1 = float(tokens[1])
-        except IndexError:
-            pass
+    operation = list_of_inputs[0]
+    string_of_nums = list_of_inputs[1:]
 
-        try:
-            num2 = float(tokens[2])
-        except IndexError:
-            pass
+    nums = [float(i) for i in string_of_nums]
 
-        list_of_operations = ["q", "+", "-", "*", "/", "square", "cube", "pow", "mod"]
+    if operation == "+": 
+        output = add(nums)
+        print output
 
-        if operation not in list_of_operations:
-            print "That is not a valid input, please try again."
+#     try:
+#         num1 = float(list_of_inputs[1])
+#     except IndexError:
+#         pass
 
-        elif operation == "q": 
-            quit()
+#     try:
+#         num2 = float(list_of_inputs[2])
+#     except IndexError:
+#         pass
 
-        else:
-            if operation == "+": 
-                output = add(num1, num2)
-                print output
-        
-            elif operation == "-": 
-                output = subtract(num1, num2)
-                print output
-        
-            elif operation == "*": 
-                output = multiply(num1, num2)
-                print output
-        
-            elif operation == "/": 
-                output = divide(num1, num2)
-                print output
-        
-            elif operation == "square": 
-                output = square(num1)
-                print output
-        
-            elif operation == "cube": 
-                output = cube(num1)
-                print output    
-        
-            elif operation == "pow": 
-                output = pow(num1, num2)
-                print output
-        
-            elif operation == "mod": 
-                output = mod(num1, num2)
-                print output    
-        
-            
+#     list_of_operations = ["q", "+", "-", "*", "/", "square", "cube", "pow", "mod"]
+
+#     if operation not in list_of_operations:
+#         print "That is not a valid input, please try again."
+
+#     elif operation == "q": 
+#         quit()
+
+#     else:
+#         if operation == "+": 
+#             output = add(nums)
+#             print output
+    
+#         elif operation == "-": 
+#             output = subtract(num1, num2)
+#             print output
+    
+#         elif operation == "*": 
+#             output = multiply(num1, num2)
+#             print output
+    
+#         elif operation == "/": 
+#             output = divide(num1, num2)
+#             print output
+    
+#         elif operation == "square": 
+#             output = square(num1)
+#             print output
+    
+#         elif operation == "cube": 
+#             output = cube(num1)
+#             print output    
+    
+#         elif operation == "pow": 
+#             output = pow(num1, num2)
+#             print output
+    
+#         elif operation == "mod": 
+#             output = mod(num1, num2)
+#             print output
+    
+# #note - check for nums - nums[1:]
