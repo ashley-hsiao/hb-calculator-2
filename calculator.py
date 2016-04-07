@@ -22,6 +22,10 @@ while True:
         output = add(nums)
         print output
 
+    elif operation == "-": 
+        output = subtract(nums)
+        print output
+        
 #     try:
 #         num1 = float(list_of_inputs[1])
 #     except IndexError:

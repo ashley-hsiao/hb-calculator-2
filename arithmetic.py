@@ -1,22 +1,23 @@
-# def add(num1, num2):
-#     """Returns the sum of the two inputs"""
-    
-#     return num1 + num2
-    
-# This sums up infinite number of arguments
 def add(nums):
+    """Returns sum of all inputs"""
+
     total = 0
     for num in nums:
         total += num
     return total
 
 
-def subtract(num1, num2):
-    """Returns the second input subtracted from the first"""
+def subtract(nums):
+    """Subtracts all inputs from first input"""
 
-    return num1 - num2
+    total = nums[0]
 
+    for num in nums[1:]:
+        total -= num
+    return total
+    
 
+# remaining functions to be fixed and tested
 def multiply(num1, num2):
     """Multiplies the two inputs together"""
 
